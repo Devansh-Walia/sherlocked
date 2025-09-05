@@ -20,9 +20,9 @@ const SAMPLE_APPS: BlockedApp[] = [
     name: 'Instagram',
     packageName: 'com.instagram.android',
     icon: '📷',
-    isBlocked: false,
+    isBlocked: true, // Blocked for demo
     timeLimit: 60, // 1 hour
-    timeUsed: 0,
+    timeUsed: 15, // Some usage for demo
     lastAccessed: null
   },
   {
@@ -30,9 +30,9 @@ const SAMPLE_APPS: BlockedApp[] = [
     name: 'TikTok',
     packageName: 'com.zhiliaoapp.musically',
     icon: '🎵',
-    isBlocked: false,
+    isBlocked: true, // Blocked for demo
     timeLimit: 30, // 30 minutes
-    timeUsed: 0,
+    timeUsed: 25, // Almost at limit
     lastAccessed: null
   },
   {
@@ -42,7 +42,7 @@ const SAMPLE_APPS: BlockedApp[] = [
     icon: '🐦',
     isBlocked: false,
     timeLimit: 45, // 45 minutes
-    timeUsed: 0,
+    timeUsed: 10,
     lastAccessed: null
   },
   {
@@ -50,9 +50,9 @@ const SAMPLE_APPS: BlockedApp[] = [
     name: 'YouTube',
     packageName: 'com.google.android.youtube',
     icon: '📺',
-    isBlocked: false,
+    isBlocked: true, // Blocked for demo
     timeLimit: 120, // 2 hours
-    timeUsed: 0,
+    timeUsed: 45,
     lastAccessed: null
   },
   {
@@ -62,7 +62,7 @@ const SAMPLE_APPS: BlockedApp[] = [
     icon: '📘',
     isBlocked: false,
     timeLimit: 60, // 1 hour
-    timeUsed: 0,
+    timeUsed: 5,
     lastAccessed: null
   }
 ]
