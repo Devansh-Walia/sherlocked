@@ -371,3 +371,354 @@
   border-color: #4caf50;
   background-color: rgba(76, 175, 80, 0.1);
 }
+
+/* Puzzle Screen Styles */
+.puzzle-screen {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.puzzle-header {
+  margin-bottom: 20px;
+}
+
+.puzzle-info {
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.puzzle-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.puzzle-app-name {
+  font-size: 16px;
+  color: #888;
+  text-align: center;
+  font-style: italic;
+}
+
+.puzzle-meta {
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: #16213e;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.puzzle-difficulty,
+.puzzle-category,
+.puzzle-timer {
+  align-items: center;
+}
+
+.difficulty-icon,
+.category-icon,
+.timer-icon {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.difficulty-text,
+.category-text,
+.timer-text {
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.difficulty-text {
+  color: #d4af37;
+}
+
+.category-text,
+.timer-text {
+  color: #eee;
+}
+
+.puzzle-content {
+  flex: 1;
+}
+
+.question-container {
+  padding: 20px;
+  background-color: #16213e;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #d4af37;
+}
+
+.question-text {
+  font-size: 18px;
+  color: #eee;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.answers-container {
+  margin-bottom: 20px;
+}
+
+.answer-option {
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  background-color: #16213e;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+.answer-option.selected {
+  border-color: #d4af37;
+  background-color: rgba(212, 175, 55, 0.1);
+}
+
+.answer-option.correct {
+  border-color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.2);
+}
+
+.answer-option.incorrect {
+  border-color: #f44336;
+  background-color: rgba(244, 67, 54, 0.2);
+}
+
+.answer-option.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.answer-letter {
+  width: 30px;
+  height: 30px;
+  background-color: #d4af37;
+  color: #1a1a2e;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 15px;
+}
+
+.answer-option.correct .answer-letter {
+  background-color: #4caf50;
+  color: white;
+}
+
+.answer-option.incorrect .answer-letter {
+  background-color: #f44336;
+  color: white;
+}
+
+.answer-text {
+  flex: 1;
+  font-size: 16px;
+  color: #eee;
+}
+
+.answer-indicator {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.puzzle-actions {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hint-button {
+  padding: 12px 20px;
+  background-color: #16213e;
+  border-radius: 8px;
+  border: 1px solid #888;
+  cursor: pointer;
+}
+
+.hint-button:hover {
+  border-color: #d4af37;
+}
+
+.hint-button-text {
+  color: #888;
+  font-size: 14px;
+}
+
+.submit-button {
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid;
+}
+
+.submit-button.enabled {
+  background-color: #d4af37;
+  border-color: #d4af37;
+}
+
+.submit-button.disabled {
+  background-color: #333;
+  border-color: #333;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.submit-button-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.submit-button.enabled .submit-button-text {
+  color: #1a1a2e;
+}
+
+.submit-button.disabled .submit-button-text {
+  color: #666;
+}
+
+.hint-container {
+  padding: 15px;
+  background-color: rgba(212, 175, 55, 0.1);
+  border-radius: 8px;
+  border: 1px solid #d4af37;
+  margin-bottom: 20px;
+}
+
+.hint-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #d4af37;
+  margin-bottom: 8px;
+}
+
+.hint-text {
+  font-size: 14px;
+  color: #eee;
+  line-height: 1.3;
+}
+
+.result-container {
+  padding: 20px;
+  background-color: #16213e;
+  border-radius: 12px;
+  border: 2px solid;
+  margin-bottom: 20px;
+}
+
+.result-container.success {
+  border-color: #4caf50;
+}
+
+.result-container.failure {
+  border-color: #f44336;
+}
+
+.result-header {
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.result-header.success {
+  color: #4caf50;
+}
+
+.result-header.failure {
+  color: #f44336;
+}
+
+.result-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.result-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.result-subtitle {
+  font-size: 14px;
+  text-align: center;
+  color: #888;
+}
+
+.explanation-container {
+  padding: 15px;
+  background-color: rgba(212, 175, 55, 0.1);
+  border-radius: 8px;
+  border: 1px solid #d4af37;
+  margin-bottom: 15px;
+}
+
+.explanation-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #d4af37;
+  margin-bottom: 8px;
+}
+
+.explanation-text {
+  font-size: 14px;
+  color: #eee;
+  line-height: 1.3;
+}
+
+.result-actions {
+  align-items: center;
+}
+
+.auto-close-text {
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+  font-style: italic;
+}
+
+.puzzle-stats {
+  padding: 15px;
+  background-color: #16213e;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.stats-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.stats-row {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.stat-item-small {
+  align-items: center;
+}
+
+.stat-number-small {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d4af37;
+  text-align: center;
+}
+
+.stat-label-small {
+  font-size: 10px;
+  color: #888;
+  text-align: center;
+  margin-top: 2px;
+}

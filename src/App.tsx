@@ -10,6 +10,7 @@ import {
   markDailyReset,
   canAttemptPuzzle
 } from './utils/storage'
+import { PuzzleScreen } from './components/PuzzleScreen'
 import './App.css'
 
 // Sample apps for demonstration
@@ -304,6 +305,37 @@ export function App() {
     </view>
   )
 
+  const handlePuzzleSuccess = useCallback(() => {
+    // Puzzle solved successfully - grant app access
+    setAppState(prev => ({
+      ...prev,
+      currentScreen: 'home',
+      selectedApp: null,
+      currentPuzzle: null,
+      error: null
+    }))
+
+    // Update stats
+    setStats(getUserStats())
+
+    // In a real app, this would launch the requested app
+    console.log(`Access granted to ${appState.selectedApp?.name}`)
+  }, [appState.selectedApp])
+
+  const handlePuzzleFailure = useCallback(() => {
+    // Puzzle failed - return to home
+    setAppState(prev => ({
+      ...prev,
+      currentScreen: 'home',
+      selectedApp: null,
+      currentPuzzle: null,
+      error: 'Puzzle failed. Access denied.'
+    }))
+
+    // Update stats
+    setStats(getUserStats())
+  }, [])
+
   const renderCurrentScreen = () => {
     switch (appState.currentScreen) {
       case 'home':
@@ -314,6 +346,19 @@ export function App() {
         return renderStatsScreen()
       case 'settings':
         return renderSettingsScreen()
+      case 'puzzle':
+        if (appState.currentPuzzle && appState.selectedApp) {
+          return (
+            <PuzzleScreen
+              puzzle={appState.currentPuzzle}
+              appName={appState.selectedApp.name}
+              onSuccess={handlePuzzleSuccess}
+              onFailure={handlePuzzleFailure}
+              onBack={() => navigateToScreen('home')}
+            />
+          )
+        }
+        return renderHomeScreen()
       default:
         return renderHomeScreen()
     }
