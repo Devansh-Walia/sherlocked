@@ -14,3 +14,7 @@ dist/
 
 # TypeScript
 *.tsbuildinfo
+
+
+# todo
+todo.md
